@@ -26,10 +26,10 @@
   1. Ciągłość funkcji w punkcie i na zbiorze. Warunki równoważne ciągłości. Własności funkcji ciągłych na zbiorach zwartych.![NiematojakTomasz + Patryk, Krzysiek][4]
   2. Szeregi liczbowe. Podstawowe kryteria zbieżności. ![Maciek + Patryk, Konrad][4]
   3. Ciągi i szeregi funkcyjne. Zbieżność punktowa i jednostajna ciągów i szeregów funkcyjnych. ![Michał + Patryk, Kuba][4]
-  4. Pochodna funkcji jednej zmiennej rzeczywistej ![Maciek, Kuba][4]
+  4. Pochodna funkcji jednej zmiennej rzeczywistej. (+Interpretacja geometryczna. Zastosowanie rachunku różniczkowego do badania przebiegu zmienności funkcji jednej zmiennej) ![Maciek, Kuba][3]
   5. Wzór Taylora dla funkcji jednej zmiennej rzeczywistej. Zastosowania wzoru Taylora do obliczeń przybliżonych. Rozwijanie funkcji w szereg potęgowy. ![Witek, Maciek][4]
   6. Szeregi potęgowe. Zbieżność szeregu potęgowego, promień i przedział zbieżności. ![Michał + Patryk, sznaider][4]
-  7. Całka Riemanna ![Maciek, Kuba][4]
+  7. Całka Riemanna.(+Podstawowe twierdzenie rachunku całkowego) ![Maciek, Kuba][3]
   8. Podstawowe metody całkowania ![Maciek, Kuba][4]
 
 #### 2. Matematyka Dyskretna
