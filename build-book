@@ -1,0 +1,37 @@
+#!/bin/bash
+
+set -e
+
+function log {
+    printf "\033[32m${1}\033[0m\n"
+}
+
+function log_error {
+    printf "\033[31mERROR: ${1}\033[0m\n"
+}
+
+cd "$(dirname "$0")"
+
+if which node > /dev/null; then
+    NODE_BINARY=node
+elif which nodejs > /dev/null; then
+    NODE_BINARY=nodejs
+else
+    log_error "You need to install Node.js"
+    exit 1
+fi
+
+if ! which npm > /dev/null; then
+    log_error "You need to install npm."
+    exit 1
+fi
+
+if [[ ! -e ./book-builder/node_modules/ ]]; then
+    log "Installing node-builder dependencies"
+    cd book-builder
+    npm install
+    cd ..
+fi
+
+$NODE_BINARY book-builder/build-book.js "$@"
+

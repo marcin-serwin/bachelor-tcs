@@ -1,0 +1,42 @@
+doctype html
+html(lang='pl')
+  head
+    meta(charset="utf-8")
+    title= 'Egzamin Licencjacki'
+    if remoteMathJax
+      script(type='text/x-mathjax-config').
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']]
+          }
+        });
+      script(type='text/javascript', async, src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML')
+    link(rel='stylesheet' href='static/hljs-github.css')
+    link(rel='stylesheet' href='static/style.css')
+  body
+    span.title Egzamin Licencjacki
+    span.subtitle Opracowanie pytań do egazminu licencjackiego na TCS.
+    h4 Spis Treści
+    .toc
+      ul
+        each category in content
+          li
+            a(href='#' + getCategoryHTMLId(category)) #{category.categorySymbol} #{category.categoryName}
+            ul
+              each chapter in category.chapters
+                li
+                  a(href='#' + getChapterHTMLId(chapter)) #{chapter.categorySymbol}.#{chapter.chapter} #{chapter.chapterName}
+                  ul
+                    each question in chapter.questions
+                      li
+                        a(href='#' + getQuestionHTMLId(question)) Pytanie #{question.categorySymbol}.#{question.chapter}.#{question.question}. #{md.renderInline(question.questionName)}
+
+    each category in content
+      h1(id=getCategoryHTMLId(category)) #{category.categorySymbol} #{category.categoryName}
+      each chapter in category.chapters
+        h2(id=getChapterHTMLId(chapter)) #{chapter.categorySymbol}.#{chapter.chapter} #{chapter.chapterName}
+        each question in chapter.questions
+          h3(id=getQuestionHTMLId(question)) Pytanie #{question.categorySymbol}.#{question.chapter}.#{question.question}.
+          p.fullQuestion= md.renderInline(question.questionFull)
+          div.answer!= question.answer

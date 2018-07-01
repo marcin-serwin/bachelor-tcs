@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="550pt" height="220pt" id="svg2">
+  <defs id="defs4">
+    <marker refX="0" refY="0" orient="auto" id="Arrow1Mstart" style="overflow:visible">
+      <path d="M 0,0 5,-5 -12.5,0 5,5 0,0 z" transform="scale(0.4,0.4)" id="path9053" style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none" />
+    </marker>
+  </defs>
+  <g id="layer1">
+    <text x="-24" y="485.36218" id="text9812" xml:space="preserve" style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+      <tspan x="-24" y="485.36218" id="tspan9814" />
+    </text>
+    <g id="g3213">
+      <rect width="328" height="206" x="49" y="37.362183" id="rect4244" style="color:#000000;fill:#ffffe1;fill-opacity:0.27631579;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible" />
+      <g transform="translate(-152,-480)" id="g5729">
+        <rect width="116.15827" height="38.748627" x="230.92087" y="595.98785" id="rect1316" style="color:#000000;fill:#7f7fff;fill-opacity:0.27631579;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible" />
+        <text x="247" y="619.36218" id="text1306" xml:space="preserve" style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+          <tspan x="247" y="619.36218" id="tspan1308">Web Browser</tspan>
+        </text>
+      </g>
+      <g transform="translate(-152,-480)" id="g5724">
+        <rect width="116.15827" height="38.748627" x="230.92087" y="541.98785" id="rect2772" style="color:#000000;fill:#7f7fff;fill-opacity:0.27631579;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible" />
+        <text x="247" y="565.36218" id="text2774" xml:space="preserve" style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+          <tspan x="247" y="565.36218" id="tspan2776">Mail Client</tspan>
+        </text>
+      </g>
+      <text x="163" y="235.36218" id="text4972" xml:space="preserve" style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+        <tspan x="163" y="235.36218" id="tspan4974">Your Computer</tspan>
+      </text>
+      <rect width="152" height="154" x="59" y="49.362183" id="rect5744" style="color:#000000;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 1;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible" />
+      <text x="93" y="195.36218" id="text6472" xml:space="preserve" style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+        <tspan x="93" y="195.36218" id="tspan6474">Client Programs</tspan>
+      </text>
+      <text x="245" y="195.36218" id="text6476" xml:space="preserve" style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+        <tspan x="245" y="195.36218" id="tspan6478">Operating System</tspan>
+      </text>
+      <path d="m 235,125.36218 c -20,0 -18,-42 -40,-42" id="path6482" style="color:#000000;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-start:url(#Arrow1Mstart);visibility:visible;display:inline;overflow:visible" />
+      <path d="m 235,125.36218 c -20,0 -18,12 -40,12" id="path6480" style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+      <text x="269" y="139.36218" id="text2778" xml:space="preserve" style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+        <tspan x="269" y="139.36218" id="tspan2780" />
+      </text>
+      <g transform="translate(-139,-500)" id="g5708">
+        <rect width="106" height="36" x="375" y="603.36218" id="rect2782" style="color:#000000;fill:#ffff7f;fill-opacity:0.27631579;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible" />
+        <text x="387" y="625.36218" id="text1310" xml:space="preserve" style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+          <tspan x="387" y="625.36218" id="tspan1312">DNS Resolver</tspan>
+        </text>
+      </g>
+      <g transform="translate(-139,-500)" id="g5702">
+        <path d="m 493,578.36218 a 32,15 0 1 1 -64,0 32,15 0 1 1 64,0 z" transform="translate(4,4)" id="path3510" style="color:#000000;fill:#ffff7f;fill-opacity:0.27631579;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible" />
+        <text x="463" y="579.36218" id="text3512" xml:space="preserve" style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+          <tspan x="463" y="579.36218" id="tspan3514">local</tspan>
+          <tspan x="463" y="594.36218" id="tspan3516">cache</tspan>
+        </text>
+      </g>
+      <path d="m 326,97.36218 0,6" id="path6484" style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <rect width="160.37354" height="140.12422" x="399.81323" y="71.300049" id="rect6520" style="color:#000000;fill:#ffffe1;fill-opacity:0.27631579;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible" />
+      <text x="450" y="187.36218" id="text6522" xml:space="preserve" style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+        <tspan x="450" y="187.36218" id="tspan6524">Your ISP</tspan>
+      </text>
+      <g transform="translate(167,-350)" id="g7373">
+        <text x="287" y="507.36218" id="text7375" xml:space="preserve" style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+          <tspan x="287" y="507.36218" id="tspan7377" />
+        </text>
+        <g transform="translate(-121,-132)" id="g7379">
+          <rect width="106" height="36" x="375" y="603.36218" id="rect7381" style="color:#000000;fill:#ffff7f;fill-opacity:0.27631579;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible" />
+          <text x="387" y="625.36218" id="text7383" xml:space="preserve" style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+            <tspan x="387" y="625.36218" id="tspan7385">DNS Resolver</tspan>
+          </text>
+        </g>
+        <g transform="translate(-121,-132)" id="g7387">
+          <path d="m 493,578.36218 a 32,15 0 1 1 -64,0 32,15 0 1 1 64,0 z" transform="translate(4,4)" id="path7389" style="color:#000000;fill:#ffff7f;fill-opacity:0.27631579;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible" />
+          <text x="463" y="579.36218" id="text7391" xml:space="preserve" style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+            <tspan x="463" y="579.36218" id="tspan7393">local</tspan>
+            <tspan x="463" y="594.36218" id="tspan7395">cache</tspan>
+          </text>
+        </g>
+        <path d="m 344,465.36218 0,6" id="path7397" style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      </g>
+      <path d="m 421,141.36218 c -32,0 -58,-18 -80,-18" id="path7417" style="color:#000000;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-start:url(#Arrow1Mstart);visibility:visible;display:inline;overflow:visible" />
+      <path d="m 493,578.36218 a 32,15 0 1 1 -64,0 32,15 0 1 1 64,0 z" transform="matrix(0.730025,0,0,0.730025,-180.54144,-253.85657)" id="path7421" style="color:#000000;fill:#ffff7f;fill-opacity:0.27631579;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible" />
+      <text x="155.98932" y="165.44208" id="text7423" xml:space="preserve" style="font-size:8.76029778px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+        <tspan x="155.98932" y="165.44208" id="tspan7425">mini</tspan>
+        <tspan x="155.98932" y="176.39246" id="tspan7427">cache</tspan>
+      </text>
+      <path d="m 156,156.86218 0,-2" id="path8161" style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text x="132.10818" y="165.49884" id="text8201" xml:space="preserve" style="font-size:8.42621899px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#003200;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+        <tspan x="132.10818" y="165.49884" id="tspan8205">cache timeout:</tspan>
+        <tspan x="132.10818" y="176.03162" id="tspan8207">1-30 min</tspan>
+      </text>
+      <text x="120" y="167.36218" id="text12012" xml:space="preserve" style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+        <tspan x="120" y="167.36218" id="tspan12014" />
+      </text>
+      <path d="m 607,162.36218 c -32,0 -58,-18 -80,-18" id="path12016" style="color:#000000;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-start:url(#Arrow1Mstart);visibility:visible;display:inline;overflow:visible" />
+      <text x="629" y="151.36218" id="text12018" xml:space="preserve" style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans">
+        <tspan x="629" y="151.36218" id="tspan12020">recursive</tspan>
+        <tspan x="629" y="166.36218" id="tspan12022">DNS</tspan>
+        <tspan x="629" y="181.36218" id="tspan12024">search</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
