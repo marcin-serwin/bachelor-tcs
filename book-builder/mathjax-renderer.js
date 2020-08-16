@@ -1,7 +1,7 @@
 'use strict';
 
-const mjAPI = require("mathjax-node/lib/mj-page.js");
-const jsdom = require("jsdom").jsdom;
+const mjAPI = require("mathjax-node-page");
+const jsdom = require("jsdom").JSDOM;
 
 function tryStartApi() {
     if (!tryStartApi.apiStarted) {
@@ -12,20 +12,14 @@ function tryStartApi() {
 tryStartApi.apiStarted = false;
 
 exports.render = function (html, callback) {
-    mjAPI.config({MathJax: {SVG: {font: 'TeX'}}, extensions: 'TeX/noUndefined'});
-
-    tryStartApi();
-
-    const document = jsdom(html, {features: {FetchExternalResources: false}});
-    mjAPI.typeset({
-        html: document.body.innerHTML,
-        renderer: 'SVG',
-        inputs: ['TeX'],
+    const document = (new jsdom(html, { features: { FetchExternalResources: false } })).window.document;
+    mjAPI.mjpage(document.body.innerHTML, { MathJax: { SVG: { font: 'TeX' } }, extensions: 'TeX/noUndefined' }, {
+        svg: true,
         ex: 6.1, width: 200,
         linebreaks: true,
         singleDollars: false
-    }, function(result) {
-        document.body.innerHTML = result.html;
+    }, function (result) {
+        document.body.innerHTML = result;
         let HTML = `<!DOCTYPE html>\n${document.documentElement.outerHTML}`;
 
         // Without this replace polish letters are in monospace (very ugly).
