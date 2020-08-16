@@ -1,4 +1,5 @@
-Algorytmy znajdowania najkrótszych ścieżek w grafie z ustalonym źródłem.
+Algorytmy Dijkstry oraz Bellmana-Forda znajdowania najkrótszych ścieżek w
+grafie z ustalonym źródłem.
 
 ---
 
@@ -30,25 +31,21 @@ Dowód jest oczywisty - gdyby to nie zachodziło to $d(s, v) > d(s,u)\, + \, w(u
 W tablicy $D[\,\, ]$ trzymamy (aktualne) odległości wierzchołków od źródła $s$ . 
 
 ````
-BellmanFord (G)
-{
+BellmanFord (G){
   INFINITY = 1000000000
   D[s] = 0
-  for i=1;i<=n;++i)
-  {
+  for i=1;i<=n;++i){
     if (i != s)
       D[i] = INFINITY
   }
 
-  for (i = 1; i<n; ++i)
-  {
+  for (i = 1; i<n; ++i){
     foreach (Edge (u, v) in E
       Relax (u, v)
   }
 }
 
-Relax (u,v)
-{
+Relax (u,v){
   if (D[v] > D[u] + w[u, v])
     D[v] = D[u] + w[u,v]
 }
@@ -65,8 +62,7 @@ Złożoność oczywiście $O(V  E)$ przy reprezentacji grafu przez listy sąsied
 * Dopóki $Q \neq \emptyset$ wykonuj: $u = ExtractMin(Q)$ i potem dla każdego $(u, v) \in E$ wykonaj $Relax(u, v)$.
 
 ````
-Dijkstra (G)
-{
+Dijkstra (G){
   INFINITY = 1000000000;
   queue = empty_queue
   D[s] = 0

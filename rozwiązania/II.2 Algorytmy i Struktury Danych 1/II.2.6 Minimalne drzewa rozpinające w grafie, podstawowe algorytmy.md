@@ -1,4 +1,4 @@
-Minimalne drzewa rozpinające w grafie, podstawowe algorytmy.
+Minimalne drzewa rozpinające w grafie, algorytmy Jarnika-Prima oraz Kruskala.
 
 ---
 
@@ -21,41 +21,7 @@ Minimalne drzewo rozpinające grafu $G$ to drzewo rozpinające $T$ o minimalnej 
 
 $T$ - minimalne drzewo rozpinające grafu $G$
 
-## Algorytm Borůvki
-
-* Algorytm zachłanny
-* Zakładamy, że wagi krawędzi są unikatowe - jeśli tak nie jest, indeksujemy krawędzie, a przy porównywaniu dwóch o takiej samej wadze, wybieramy tę o niższym indeksie
-
-#### Idea
-
-1. Inicjalizujemy las $F$ złożony z pojedyńczych wierzchołków grafu $G$
-2. Dopóki istnieje więcej niż jedna spójna składowa powtarzamy kroki 3-4
-3. Dla każdej spójnej składowej (drzewa w lesie $F$) znajdujemy najtańszą krawędź $e$ wychodzącą poza tą składową i dodajemy ją do lasu $F$
-4. Łączymy drzewa połączone krawędziami tworząc większe spójne składowe
-
-````
-Tree Boruvka(Graph G) {
-  F := new Forest(G.V, {})
-
-  while (F.trees.count() > 1) {
-    foreach (Tree T in F) {
-      e := cheapest_outgoing_edge(T)
-      F.add_edge(e)
-    }
-  }
-
-  return F.trees[0]
-}
-````
-
-#### Złożoność
-
-* W każdym przejściu pętli `while` liczba spójnych składowych maleje przynajmniej dwukrotnie, zatem pętla wykona się $O(log \, V)$ razy
-* Zliczanie składowych i wyszukiwanie najtańszej krawędzi - $O(V + E)$
-* Całkowita złożoność - $O(E \, log \, V)$
-
-
-## Algorytm Prima
+## Algorytm Prima (lub Jarnika)
 
 #### Idea
 
@@ -101,7 +67,7 @@ Tree Prim(Graph G) {
 #### Idea
 
 1. Sortujemy krawędzie względem najmniejszych wag
-2. Korzystając ze struktury lasu zbiorów rozłącznych z kompresją ścieżek ([Union-Find](../../II.1 Analiza Algorytmów/II.1.6 Find-Union.md)) dodajemy krawędzie do rozwiązania zgodnie z kolejnością wynikającą z posortowania, tak aby w rozwiązaniu nie pojawił się cykl
+2. Korzystając ze struktury lasu zbiorów rozłącznych z kompresją ścieżek ([Union-Find](../../II.1 Analiza Algorytmów/II.1.7 Find-Union.md)) dodajemy krawędzie do rozwiązania zgodnie z kolejnością wynikającą z posortowania, tak aby w rozwiązaniu nie pojawił się cykl
 
 
 ````

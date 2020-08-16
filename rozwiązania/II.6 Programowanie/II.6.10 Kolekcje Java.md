@@ -1,4 +1,5 @@
-Przedstaw bibliotekę kontenerów dostępnych w Java lub C++ z opisem zastosowań poszczególnych klas.
+Przedstaw bibliotekę kontenerów dostępnych w Java lub C++ z opisem
+zastosowań poszczególnych klas.
 
 ---
 
@@ -31,7 +32,7 @@ Dodatkowym ficzerem, który posiadają wrappery zwracane przez niektóre z metod
 |    Map    |   HashMap  	|                 |    TreeMap    |             |       LinkedHashMap      |
 
 ### `List`
-Sekwencja ogólnego zastosowania.
+Sekwencja ogólnego zastosowania. Listę implementują np. Stack, Vector, LinkedList. Podklasą LinkedList jest
 
 #### Implementacje
   * `LinkedList` - pozwala na wstawianie i usuwanie elementów w $O(1)$ przez iteratory, jednak dostęp do elementu przez index ma pesymistyczną złożoność $O(n)$.

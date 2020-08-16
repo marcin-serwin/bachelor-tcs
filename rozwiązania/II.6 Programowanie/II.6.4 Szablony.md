@@ -5,6 +5,10 @@ szablonów w dowolnym języku obiektowym.
 
 # Wstęp
 
+Szablony (wzorce) są czymś podobnym do makr, tyle że wykonywane są przez kompilator, a nie przez preprocesor. 
+
+Makro (lub makropolecenie) – zestaw rozkazów realizujący algorytm komputerowy przeznaczony do wykonywania przez określoną aplikację (edytor, arkusz kalkulacyjny, program graficzny) zwykle w celu automatyzacji pewnych czynności lub dokonania zmian w dokumentach bez interakcji z użytkownikiem. 
+
 Szablony zostały stworzone, by walczyć z niepotrzebną duplikacją kodu oraz w
 celu zapewnienia silniejszego typowania. Podobną rolę w innych językach
 programowania pełnią generyki. Szablony są obecne, między innymi, w językach C++

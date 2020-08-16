@@ -1,4 +1,5 @@
-Przedstaw podstawowe techniki stosowane w procesie optymalizacji zapytań w bazach danych.
+Przedstaw podstawowe techniki stosowane w procesie optymalizacji zapytań
+w bazach danych.
 
 ---
 

@@ -1,4 +1,4 @@
-Wyznacznik macierzy i jego zastosowania
+Wyznacznik macierzy i jego zastosowania.
 
 ---
 
@@ -26,7 +26,7 @@ Niech $A \in M_{n \times n} (\mathbb{R})$. Oznaczmy jej kolumny (lub analogiczni
 Istnieje zbiór tak zwanych *operacji elementarnych*, które nie zmieniają wyznacznika lub zmieniają go w sposób przewidywalny:
 1) **zamiana wierszy** - wyznacznik zmienia wtedy znak
 2) **przemnożenie wiersza przez stałą** - wyznacznik zmienia się proporcjonalnie do tejże stałej
-3) **dodanie wiersza przemnożonego przez stałą do innego wiersza** - wyznacznik się nie zmienia się
+3. Dodając lub odejmując od dowolnego wiersza/kolumny inny wiersz/kolumnę lub kombinacje liniowe innych wierszy/kolumn, nie zmieniamy wartości wyznacznika.
 
 Typowe równości z wyznacznikiem:
 * $\det(A^T) = \det(A)$
@@ -41,11 +41,6 @@ Istnieje wiele metod, które pozwalają na obliczenie wartości wyznacznika. Nie
 Z definicji również łatwo wykazać, że dla macierzy trójkątnej ($\forall_{i < j}\ a_{i,j} = 0$)
 wyznacznik jest równy $\prod_{i = 1}^na_{i,i}$.
 Można to wykorzystać poddając wcześniej macierz eliminacji Gaussa.
-
-## Macierz blokowa
-Wyznacznik dla macierzy wynosi:
-$$\det\begin{pmatrix}A& 0 \\ C& D \end{pmatrix} = \det(A) \cdot \det(D) =
-\det\begin{pmatrix}A& B \\ 0& D \end{pmatrix}$$
 
 ## Wzór Laplace'a
 $$\det(A) = \sum_{j = 1}^n (-1)^{i + j} \cdot a_{i,j} \cdot \det(A_{i,j})$$

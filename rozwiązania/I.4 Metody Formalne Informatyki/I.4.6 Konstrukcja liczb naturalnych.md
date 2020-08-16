@@ -1,4 +1,5 @@
-Konstrukcja liczb naturalnych von Neumanna, twierdzenie o indukcji. Własności liczb naturalnych.
+Konstrukcja liczb naturalnych von Neumanna, twierdzenie o indukcji. Własności
+liczb naturalnych.
 
 ----
 
@@ -31,8 +32,3 @@ to $P=\mathbb{N}$.
  - $m\subset n$ lub $n\subset m$ - czyli wszystkie liczby naturalne są porównywalne przez inkluzję
 
  - $m\in n$ albo $m=n$ albo $m\ni n$ - czyli dla dowolnych dwóch **różnych liczb** naturalnych jedna jest elementem drugiej.
-
-# Porządek na $\mathbb{N}$
-Na zbiorze liczb naturalnych zdefiniowanym jak wyżej definiujemy relację mniejszości:
-
-$m\leq n \stackrel{\textrm{def}}{\equiv} m\subset n$ oraz $m< n \stackrel{\textrm{def}}{\equiv} m\in n.$

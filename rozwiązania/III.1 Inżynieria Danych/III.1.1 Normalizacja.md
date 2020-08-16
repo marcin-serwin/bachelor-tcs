@@ -1,4 +1,4 @@
-Wyjaśnij czym jest normalizacja baz danych i w jakim celu się ją stosuje?
+ Wyjaśnij czym jest normalizacja baz danych i w jakim celu się ją stosuje.
 
 ---
 

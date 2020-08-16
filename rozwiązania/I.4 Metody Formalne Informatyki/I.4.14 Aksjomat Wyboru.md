@@ -1,4 +1,4 @@
-Aksjomatyczne ujęcie teorii mnogości. Aksjomat wyboru.
+ Aksjomatyczne ujęcie teorii mnogości. Aksjomat wyboru.
 
 ---
 # Aksjomatyczne ujęcie teorii mnogości.
@@ -15,7 +15,7 @@ Standardowym zestawem aksjomatów teorii mnogości przyjmowanym dzisiaj w matema
 6. __Aksjomat nieskończoności__: Istnieje zbiór induktywny, czyli taki, że:  
     - $\emptyset \in x$
     - jeżeli $z \in x,$ to $z \cup \{z\} \in x.$
-7. __Aksjomat regularności__: Każdy niepusty zbiór $x$  ma element rozłączny z $x$.  
+7. __Aksjomat regularności__: Każdy niepusty zbiór $x$  ma element rozłączny z $x$ (żaden zbiór nie jest swoim własnym elementem.).  
 
 
 # Aksjomat wyboru
@@ -24,13 +24,3 @@ Standardowym zestawem aksjomatów teorii mnogości przyjmowanym dzisiaj w matema
 __Aksjomat wyboru, pewnik wyboru, AC__ (ang. axiom of choice) – aksjomat teorii mnogości gwarantujący istnienie zbioru (nazywanego selektorem) zawierającego dokładnie po jednym elemencie z każdego zbioru należącego do danej rodziny niepustych zbiorów rozłącznych.  
 
 Aksjomat wyboru mówi, że jeśli $X$ jest zbiorem niezawierającym zbioru pustego oraz takim, że każde dwa jego elementy są rozłączne, to istnieje zbiór $W$, który z każdym z elementów $X$ ma dokładnie jeden element wspólny. Intuicyjnie znaczy to, że mając rodzinę rozłącznych zbiorów, możemy stworzyć zbiór, wybierając po jednym elemencie z każdego zbioru.
-
-
-## Związek z teorią ZF
-Aksjomat  __AC__ jest niezależny od powszechnie przyjmowanych aksjomatów teorii mnogości Zermelo-Fraenkela (__ZF__) (czyli nie wynika z __ZF__ ani nie implikuje aksjomatów __ZF__). Teorie mnogości oparte o aksjomaty __ZF__ oraz aksjomat  __AC__ oznacza się zwykle skrótem __ZFC__.
-
-Większość matematyków uznaje i stosuje  __AC__, jednak w dowodach twierdzeń zazwyczaj wyraźnie zaznacza się, gdy zakłada się  __AC__. Dowody te nazywa się nieefektywnymi. Zwykle są one także niekonstruktywne, gdy mówią jedynie o istnieniu danego obiektu, jednak nie wskazują go (nie podają konstrukcji).  
-
-## Konsekwencje przyjęcia AC
-
-W przypadku rodzin zbiorów skończonych aksjomat wyboru jest trywialny (tzn. wynika z innych aksjomatów). W przypadku rodzin zbiorów nieskończonych aksjomat  __AC__ również wydaje się intuicyjny. Jednak jego konsekwencje bywają zaskakujące. (Przykładowo Stefan Banach i Alfred Tarski korzystając z  __AC__ udowodnili twierdzenie o paradoksalnym rozkładzie kuli - kulę z trójwymiarowej przestrzeni euklidesowej można rozłożyć na sześć części, a następnie z tych części można złożyć, korzystając wyłącznie z obrotów i przesunięć, dwie kule identyczne jak kula wyjściowa.)

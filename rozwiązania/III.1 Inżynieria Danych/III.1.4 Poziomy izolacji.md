@@ -1,4 +1,4 @@
-Jakie są podstawowe poziomy izolacji w bazach danych, w jakim celu się je stosuje?
+Jakie są podstawowe poziomy izolacji w bazach danych, w jakim celu się je stosuje.
 
 ---
 

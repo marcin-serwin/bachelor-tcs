@@ -33,5 +33,3 @@ Można liczby całkowite ustawić w ciąg, na przykład w ten sposób: $$0, 1, -
 
 ### Zbiór liczb wymiernych
 Wystarczy, że pokażemy to dla liczb wymiernych dodatnich, bo wtedy dowód dla wszystkich liczb wymiernych będzie analogiczny jak dla liczb całkowitych. Aby to udowodnić wystarczy wszystkie liczby wymierne wpisać do kwadratowej tablicy (jak poniżej). Otrzymujemy tym samym uporządkowanie wszystkich liczb wymiernych w ciąg – co więcej, każda liczba wymierna pojawi się w tym ciągu nieskończenie wiele razy - otrzymamy w ten sposób surjekcję z $\mathbb{N}^2$ w $\mathbb{Q}$.
-
-![](../../resources/I.4.3-liczby-wymierne.png)

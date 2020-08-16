@@ -5,7 +5,7 @@ Równoliczność zbiorów na przykładach $(A^B)^C \sim A^{B \times C}$ oraz $(A
 
 Zbiory $A$ i $B$ nazywamy równolicznymi, jeżeli istnieje bijekcja $f : A \rightarrow B$.
 
-# $(A^B)^C \sim A^{B \times C}$
+## $(A^B)^C \sim A^{B \times C}$
 
 Skonstruujmy $F: (A^B)^C \rightarrow A^{B \times C}$ taką że $F(f) = g$ gdzie wartość $g(b,c)$ ustalamy jako $f(c)(b)$.
 
@@ -22,7 +22,7 @@ Dalej $F(f_{1})(b,c) = f_{1}(c)(b) \neq f_{2}(c)(b) = F(f_{2})(b,c)$, co oznacza
 
 ### 3. Ponieważ $F$ jest zarówno surjekcją jak i iniekcją, to jest ona bijekcją, a więc zbiory te są równoliczne. QED
 
-# $(A \times B)^C \sim A^C \times B^C$
+## $(A \times B)^C \sim A^C \times B^C$
 
 Skonstruujmy $F: A^C \times B^C \rightarrow (A \times B)^C$ taką że $F((g_{1}, g_{2})) = f$ gdzie $f(c) = (g_{1}(c), g_{2}(c))$.
 

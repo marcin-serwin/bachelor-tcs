@@ -1,10 +1,10 @@
-Wybierz język obiektowy z rozwiniętą kontrolą dostępu do pól i metod obiektów. Opisz występujące w nim mechanizmy kontroli.
+Wybierz język obiektowy z rozwiniętą kontrolą dostępu do pól i metod obiektów. Opisz występujące w nim mechanizmy kontroli.
 
 ---
 
 # Kontrola dostępu
 
-Wiele obiektowych języków programowania daje możliwość regulowania poziomu dostępu do poszczególnych elementów klasy. Pozwla to na oddzielenie publicznego interfejsu od szczegółów implementacyjnych klasy. Służą do tego celu odpowiednie modyfikatory.
+Wiele obiektowych języków programowania daje możliwość regulowania poziomu dostępu do poszczególnych elementów klasy. Pozwala to na oddzielenie publicznego interfejsu od szczegółów implementacyjnych klasy. Służą do tego celu odpowiednie modyfikatory.
 
 # Kontrola dostępu w Javie
 W Javie mamy możliwość kontrolowania dostępu zarówno do składowych klasy jak i do samych klas i interfejsów. Używamy w tym celu czterech modyfikatorów:
@@ -16,12 +16,9 @@ W Javie mamy możliwość kontrolowania dostępu zarówno do składowych klasy j
 ## Przykład
 ````java
 package A;
-
 class B { // klasa o dostępie pakietowym (widoczna tylko w pakiecie A)
     public int a = 0; // zmienna publiczna
-
     private class C {} // prywatna klasa (widoczna tylko w B)
-
     protected void d() {} // metoda widoczna w pakiecie A oraz
                           // wszystkich klasach dziedziczących po A
 }

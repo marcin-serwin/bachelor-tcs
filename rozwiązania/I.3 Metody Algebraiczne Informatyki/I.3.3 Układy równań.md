@@ -1,4 +1,4 @@
-Opisz kilka metod rozwiązywania układów równań liniowych.
+Opisz kilka metod rozwiązywania układów równań liniowych.
 
 ---
 
@@ -50,123 +50,15 @@ Gdy:
 1. $r = n  \Rightarrow$ układ ma **dokładnie jedno rozwiązanie**,
 2. $r < n  \Rightarrow$ układ ma **nieskończenie wiele rozwiązań** zależnych od $n-r$ parametrów.
 
-#### Przykład
-Załóżmy, że chcemy rozwiązać następujący układ równań:
-
-$$\begin{alignat}{7}
-a &&\; - \;&& b &&\; + \;&& 2c &&\; + \;&& 2d &&\; = \;&& 0 & \qquad (L_1) \\
-2a &&\; - \;&& 2b &&\; + \;&& c &&\; &&\; &&\; = \;&& 1 & \qquad (L_2) \\
--a &&\; + \;&& 2b &&\; + \;&& c  &&\; - \;&& 2d &&\; = \;&& 1 &  \qquad (L_3) \\
-2a &&\; - \;&& b &&\; + \;&& 4c  &&\; \;&& &&\; = \;&& 2 &  \qquad (L_4) \\
-\end{alignat}$$
-
-Macierz rozszerzona tego układu:
-
-$$U=\left[\left.\begin{matrix}
-1 & -1 & 2 & 2 \\
-2 & -2 & 1 & 0 \\
--1 & 2 & 1 & -2 \\
-2 & -1 & 4 & 0
-\end{matrix}\right|\begin{matrix}0\\1\\1\\2\end{matrix}\right]$$
-
-##### 1. Postać schodkowa
-Dla każdego z wierszy odejmujemy go z odpowiednim współczynnikiem od pozostałych.
-
-###### 1.1
-Wykonujemy **odjęcie wiersza** $L_1$ od pozostałych:
-
-$$\begin{align}
-& L_2 = L_2 - 2L_1 \\
-& L_3 = L_3 + L_1 \\
-& L_4 = L_4 - 2L_1 \\
-\end{align}$$
-
-otrzymując:
-
-$$U \sim \left[\left.\begin{matrix}
-1 & -1 & 2 & 2 \\
-0 & 0 & -3 & -4 \\
-0 & 1 & 3 & 0 \\
-0 & 1 & 0 & -4
-\end{matrix}\right|\begin{matrix}0\\1\\1\\2\end{matrix}\right]$$
-
-###### 1.2
-Następnie **zamieniamy miejscami wiersze** $L_2$ i $L_3$:
-
-$$U \sim \left[\left.\begin{matrix}
-1 & -1 & 2 & 2 \\
-0 & 1 & 3 & 0 \\
-0 & 0 & -3 & -4 \\
-0 & 1 & 0 & -4
-\end{matrix}\right|\begin{matrix}0\\1\\1\\2\end{matrix}\right]$$
-
-###### 1.3
-Odejmujemy wiersz $L_2$ (wykonując $L_4 = L_4 - L_2$):
-
-$$U \sim \left[\left.\begin{matrix}
-1 & -1 & 2 & 2 \\
-0 & 1 & 3 & 0 \\
-0 & 0 & -3 & -4 \\
-0 & 0 & -3 & -4
-\end{matrix}\right|\begin{matrix}0\\1\\1\\1\end{matrix}\right]$$
-
-###### 1.4
-Odejmujemy wiersz $L_3$ (wykonując $L_4 = L_4 - L_3$):
-
-$$U \sim \left[\left.\begin{matrix}
-1 & -1 & 2 & 2 \\
-0 & 1 & 3 & 0 \\
-0 & 0 & -3 & -4 \\
-0 & 0 & 0 & 0
-\end{matrix}\right|\begin{matrix}0\\1\\1\\0\end{matrix}\right]$$
-
-##### 2. Istnienie rozwiązań
-Nasza macierz znajduje się już w postaci schodkowej. Można zauważyć, że rząd macierzy jest równy $3$, czyli mniejszy od liczby szukanych niewiadomych. Z twierdzenia Kroneckera-Capelli'ego wynika, że układ ma nieskończenie wiele rozwiązań zależnych od jednego parametru.
-
-##### 3. Rozwiązanie układu
-Rozwiązujemy układ równań. Dla dowolnej wartości zmiennej $d$ (przyjmijmy $x$) mamy:
-
-$$\begin{cases}
-a - b + 2c + 2d = 0\\
-b + 3c = 1\\
--3c - 4d = 1\\
-d = x
-\end{cases}$$
-
-Rozwiązanie tego układu pozostawiamy czytelnikowi (podstawiamy wartości od dołu).
+Jeżeli $r(W)\ne r(U)$, to sprzeczność.
 
 ### Eliminacja Gaussa-Jordana
 Zamiast kończyć proces eliminacji gdy macierz znajdzie się w postaci schodkowej, można kontynuować wykonywanie operacji elementarnych tak długo, aż otrzymamy macierz, która na przekątnej ma same $0$ lub $1$.
 
-#### Przykład
-Załóżmy, że doprowadziliśmy macierz do następującej postaci schodkowej:
+### Wzory Cramera
+Niech $x_1a_1+...+x_na_n=b$, gdzie $x=(x_1,...,x_n)$ oraz $b=(b_1,...,b_n)$. Jeśli $det(a_1,...,a_n)\ne 0$, to układ jest 
+* oznaczony (ma tylko jedno rozwiązanie) $x_i=\frac{det(a_1,...a_{i-1},b,a_{i+1},...,a_n)}{det(a_1,...,a_n)}$
 
-$$U \sim \left[\left.\begin{matrix}
-2 & 1 & 0 \\
-0 & \frac{1}{2} & 0 \\
-0 & 0 & -1 \\
-\end{matrix}\right|\begin{matrix}7\\\frac{3}{2}\\1\end{matrix}\right]$$
-
-Niech $L_3 = -L_3$, a $L_2 = 2L_2$:
-
-$$U \sim \left[\left.\begin{matrix}
-2 & 1 & 0 \\
-0 & 1 & 0 \\
-0 & 0 & 1 \\
-\end{matrix}\right|\begin{matrix}7\\3\\-1\end{matrix}\right]$$
-
-Następnie $L_1 = L1 - L_2$, a na końcu $L_1 = \frac{1}{2}L_1$:
-
-$$U \sim \left[\left.\begin{matrix}
-1 & 0 & 0 \\
-0 & 1 & 0 \\
-0 & 0 & 1 \\
-\end{matrix}\right|\begin{matrix}2\\3\\-1\end{matrix}\right]$$
-
-W ten sposób doprowadziliśmy układ równań do następującej postaci:
-
-$$\begin{cases}
-a = 2\\
-b = 3\\
-c = -1\\
-\end{cases}$$
+W przeciwnym przypadku, gdy $det(a_1,...,a_n)=0$, to układ jest
+* sprzeczny, gdy choć jeden wyznacznik we wzorach Cramera zawierający $b$ jest różny od $0$,
+* nieoznaczony (więcej niż jedno rozwiązanie lub sprzeczny), gdy wszystkie wyznaczniki we wzorach Cramera zawierające $b$ są równe $0$.

@@ -1,4 +1,4 @@
-Domykanie relacji ze względu na różne własności. Podaj przykłady własności na które istnieje i na które nie istnieje domknęcie.
+Domykanie relacji ze względu na różne własności. Podaj przykłady własności na które istnieje i na które nie istnieje domknięcia.
 
 ---
 
@@ -35,18 +35,12 @@ Dalej będziemy mówić o domykaniu relacji ze względu na pewne własności.
 ## Zwrotność (istnieje)
 Relacja $R \subset X^2$ jest zwrotna, gdy $\forall_{ x\in X} (x,x) \in R$.
 
-Pokażemy, że dla każdej relacji $R\subset X^2$ jej domknięcie zwrotne na $X$ to $R\cup 1_X$. Pokażemy po kolei, że spełnia warunki domknięcia:  
- 1. $R \subset R \cup 1_X$,
- 2. $1_X \subset R \cup 1_X$, a więc jest zwrotna,
- 3. Weźmy dowolną zwrotną relację $T\supset R$. Ponieważ $T$ jest zwrotna to $T\supset 1_X$, a więc $T\supset R \cup 1_X$, więc $R\cup 1_X$ jest najmniejsza w sensie inkluzji.
+Dla każdej relacji $R\subset X^2$ jej domknięcie zwrotne na $X$ to $R\cup 1_X$.
 
 ## Symetria (istnieje)
 Relacja $R \subset X^2$ jest symetryczna, gdy $\forall_{ x,y \in X} (x,y) \in R \Leftrightarrow (y,x) \in R$.
 
-Pokażemy, że dla każdej relacji $R\in X^2$ jej domknięcie symetryczne na $X$ to $R\cup R^{-1}$. Pokażemy po kolei, że spełnia warunki domknięcia:  
- 1. $R \subset R \cup R^{-1}$,
- 2. $(R \cup R^{-1})^{-1} = R^{-1} \cup (R^{-1})^{-1}= R^{-1} \cup R= R \cup R^{-1}$, a więc jest symetryczna,
- 3. weźmy dowolną symetryczną relację $T\supset R$. Ponieważ $T$ jest symetryczna to $T \supset T^{-1}$. Skoro $T \supset R$ to $T^{-1} \supset R^{-1}$. Ponieważ $T \supset T^{-1}$, to $T\supset R\cup R^{-1}$.
+Dla każdej relacji $R\in X^2$ jej domknięcie symetryczne na $X$ to $R\cup R^{-1}$.
 
 ## Spójność (nie istnieje)
 Relacja $R$ jest spójna, gdy $\forall_{x,y \in X} (x,y) \in R \vee (y,x)\in R$.
@@ -66,7 +60,3 @@ Przykładem takiej relacji jest $\{(0,1),(1,0)\}$. Sama w sobie nie jest antysym
 Relacja $R$ jest przechodnia, gdy z faktu, że $(x,y) \in R$ oraz $(y,z) \in R$, wynika, że $(x,z) \in R$.
 
 Domknięciem przechodnim relacji $R \subset X \times X$ jest relacja $R^* = \bigcup_{i \in \mathbb{N}, i>0} R^i$
-
-Zauważmy, że jeśli $(x, y) \in R^i$ oraz $(y, z) \in R^j$ to $(x, z) \in R^{i+j}$ czyli relacja $R^*$ jest przechodnia i $R \subset R^*$. Jeśli pokażemy, że dla dowolnej przechodniej relacji $T \supset R$ relacja $R^* \subset T$, to pokażemy, że $R^*$ jest przechodnim domknięciem. Udowodnijmy indukcyjnie, że $\forall_{n > 0} R^n \subset T$:
-1. $R \subset T$
-2. Załóżmy, że dla wszystkich $0 <m < n$ mamy, że $R^m \subset T$, wtedy z przechodniości $T$ wynika, że $R \circ R^{n-1} = R^n \subset T$

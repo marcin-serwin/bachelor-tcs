@@ -1,4 +1,5 @@
-Zrównoważone drzewa wyszukiwań binarnych na przykładzie drzew AVL lub drzew czerwono-czarnych.
+Zrównoważone drzewa wyszukiwań binarnych na przykładzie drzew AVL lub
+drzew czerwono-czarnych.
 
 ---
 # Zrównoważone drzewa *BST*
@@ -29,26 +30,8 @@ Uwaga. *Liść zewnętrzny* w drzewie binarnym to puste poddrzewo (pusty wskaźn
 ### Lemat
 > W drzewie binarnym o $n$ wierzchołkach jest $n+1$ liści zewnętrznych.
 
-**Dowód.**
-
-Niech $v_1, \ldots, v_n$ będą wartościami kluczy w drzewie posortowanymi rosnąco, załóżmy dodatkowo, że te klucze są różne. 
-
-Teraz załóżmy, że chcemy znaleźć w drzewie wartość $v < v_1$. Trafimy na jakiś pusty wskaźnik, akurat w tym przypadku najbardziej z lewej. Jeśli szukalibyśmy wartości $v \in (v_1, v_2)$, trafimy na inny $NULL$, który jest na prawo do $v_1$, ale na lewo od $v_2$. I tak dalej idąc z wartością $v$ aż do czasu gdy $v > v_n$ trafiamy na ostatni $NULL$ w drzewie, będący najbardziej na prawo. Przeszliśmy przez wszystkie $NULL$-e w drzewie - było ich tyle ile możliwych zakresów wartości $(v_i, v_{i+1})$ czyli $n+1$.
-
 ### Twierdzenie
 > Wysokość drzewa AVL o $n$ wierzchołkach nie przekracza $1.45 \log n = \Theta(\log n)$.
-
-**Dowód.**
-
-Niech $N(h)$ będzie najmniejszą możliwą liczbą liści zewnętrznych w drzewie AVL o wysokości $h$.
-
-Zauważmy, że zachodzi $N(h) = N(h-1) + N(h-2)$, gdyż minimalne drzewo AVL o wysokości $h$ powstaje z dołączenia do korzenia dwóch minimalnych drzew AVL, o wysokości $h-1$ i $h-2$, a liczba liści zewnętrznych w tak powstałym drzewie jest sumą liści zewnętrznych w obu poddrzewach.
-
-Ponadto mamy $N(0) = 2$, bo dla drzewa o wysokości $0$ (jeden węzeł) mamy dwa puste odsyłacze. Analogicznie $N(1) = 3$,  bo najmniejsze drzewo o wysokości 1 to ścieżka złożona z dwóch wierzchołków - takie drzewo posiada 3 puste odsyłacze. 
-
-Łatwo zatem wywnioskować, że $N(h) = F_{h+3}$, gdzie $F_i$ jest $i$-tą liczbą Fibonacciego. <br>
-Dla liczb Fibonacciego zachodzi $\Phi^{k-2} \leq F_k \leq \Phi^{k-1}$, gdzie $\Phi = \frac{1 + \sqrt 5}{2}$ - złoty podział. <br>
-Z powyższego mamy $\Phi^{h+1} \leq N(h) \Rightarrow h+1 \leq \log_{\Phi} N(h) \Rightarrow h \leq 1.45 \log(n+1)-1 \leq 1.45 \log n$. 
 
 ## Operacje słownika w drzewie AVL
 ### Wyszukiwanie klucza - search(x)

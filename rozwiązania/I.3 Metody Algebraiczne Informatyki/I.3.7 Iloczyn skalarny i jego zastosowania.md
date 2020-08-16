@@ -1,4 +1,4 @@
-Iloczyn skalarny i jego zastosowania
+Iloczyn skalarny i jego zastosowania.
 ---
 
 # Definicje

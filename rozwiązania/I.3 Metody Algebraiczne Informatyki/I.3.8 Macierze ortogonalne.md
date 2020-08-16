@@ -27,36 +27,9 @@ $$A^T A = A A^T = I_n$$
 gdzie $I_n\,$ oznacza macierz jednostkową wymiaru $n\,$,  $A^T\,$ oznacza macierz transponowaną względem $A\,$.
 
 ## Własności
+* Kolumny/wiersze macierzy ortonormalnej tworzą bazę ortonormalną
 * Wyznacznik macierzy ortogonalnej jest równy $1$ lub $-1$.
 * Jeśli $A,B$ są macierzami ortogonalnymi tego samego rzędu, to ich iloczyn $AB$ też jest macierzą ortogonalną.
 * Macierz odwrotna do macierzy $A$ jest jej macierzą transponowaną, tj. $A^{-1}=A^T$. Macierz ta też jest ortogonalna.
 * Macierz jednostkowa jest ortogonalna.
 * Z własności zbioru macierzy ortogonalnych stopnia $n$ wynika, że zbiór ten tworzy **grupę z mnożeniem macierzy** jako działaniem grupowym. Grupę tę nazywa się grupą ortogonalną stopnia $n$ i oznacza się symbolem $O(n)$ lub $O(n,\mathbb{R})$.
-* **Kolumny** macierzy $A$, traktowane jako wektory przestrzeni $\mathbb{R}^n$, **tworzą układ ortonormalny**.
-* **Wiersze** macierzy $A$, traktowane jako wektory przestrzeni $\mathbb{R}^n$, **tworzą układ ortonormalny**.
-
-
-## Przykłady
-Poniżej podano przykłady macierzy ortogonalnych. Łatwo można to sprawdzić, wykonując obliczenia iloczynów skalarnych kolumn (traktowanych jako wektory), że są one wzajemnie ortogonalne; to samo dotyczy wierszy.
-
-* Macierze jednostkowe, np.
-$$\begin{bmatrix}
-1 & 0\\
-0 & 1\\
-\end{bmatrix}$$
-
-* Dwuwymiarowe macierze antysymetryczne, np.
-$$\begin{bmatrix}
-0.96 & -0.28\\ 0.28 & 0.96\\
-\end{bmatrix}$$
-
-* Macierze obrotu, np.
-$$\begin{bmatrix}
-\cos x & -\sin x\\
-\sin x & \cos x\\
-\end{bmatrix}$$
-
-* Macierze permutacji, np.
-$$\begin{bmatrix}
-1 & 0 & 0& 0 & 0 \\ 0 & 0 &  0& 0 & 1\\0 & 1 &  0& 0 & 0\\0 & 0 &  0& 1 & 0\\0 & 0 &  1& 0 & 0\\
-\end{bmatrix}$$

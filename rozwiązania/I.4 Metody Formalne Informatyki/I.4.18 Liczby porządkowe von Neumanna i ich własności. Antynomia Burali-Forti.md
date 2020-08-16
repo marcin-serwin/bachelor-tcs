@@ -1,4 +1,4 @@
-Liczby porządkowe von Neumanna i ich własności.  Antynomia Burali-Forti.
+Liczby porządkowe von Neumanna i ich własności. Antynomia Burali-Forti.
 
 ---
 

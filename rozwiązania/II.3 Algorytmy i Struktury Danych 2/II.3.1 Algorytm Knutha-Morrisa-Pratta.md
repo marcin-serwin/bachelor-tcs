@@ -1,4 +1,5 @@
-Wyszukiwanie wzorca metodą prefikso-sufiksów (KMP), uogólnienie na wiele wzorców
+Wyszukiwanie wzorca metodą prefikso-sufiksów (KMP), uogólnienie na wiele
+wzorców (Aho-Corasic).
 
 ---
 
@@ -46,14 +47,6 @@ KMP_algorithm(w, T)
 
 ### Analiza złożoności
 Wszystkie operacje wewnątrz pętli *for* "dotykają" zmiennej $d$. Policzmy zatem ile razy w ciągu działania algorytmu te operacje się wykonują. Przypisanie do zmiennej $d$ do komórki w tablicy $KMP$ zdąży się dokładnie |W| razy. Zwiększenie $d$ zdarza się co najwyżej raz na obieg pętli *for*, a więc, co najwyżej |W| razy. Natomiast każde przypisanie w pętli *while* to zmniejszenie wartości zmiennej $d$. Ponieważ zwiększona zostanie maksymalnie $|W|$ razy, a $d$ musi pozostać nieujemne to również ta operacje wykonają się w całkowitym czasie nie większym niż $|W|$. Stąd mamy złożoność $O(|W|)$ co jest równoważne $O(|w|+|T|)$.
-
-### Uwagi
-Warto zauważyć, że możemy bardzo łatwo zminimalizować zużycie dodatkowej pamięci przez *KMP*, do liniowego względem długości wzorca. Zauważmy, że ponieważ pomiędzy wzorcem i tekstem znajduje się $\#$, to wartości w tablicy $KMP$ za tym punktem będą zawsze mniejsze lub równe długości wzorca. Następnie zauważmy, że by obliczyć następną wartość w tablicy $KMP$, potrzebujemy znać wartość poprzedniego elementu tablicy i ewentualnie elementów $KMP[KMP[i-1]]$, $KMP[KMP[KMP[i-1]]]$, itd. Jednal wszystkie one, z poprzedniego spostrzeżenia, są mniejsze lub równe długości wzorca! Potrzebujemy zatem pamiętać jedynie tablicę $KMP$ dla wzorca oraz wartość tablicy $KMP$ dla poprzedniego elementu.
-
-## Problemy rozwiązywalne przez *KMP*
-- W prosty sposób sprawdzić, czy tekst $T$ jest utworzony z wielokrotnego powtórzenia tego samego słowa $s$ - wystarczy znaleźć najdłuższy prefikso-sufiks $T$ *(oznaczmy długość tego prefikso-sufiksu przez $d$)* i sprawdzić, czy $|T|-d$ dzieli $|T|$. Jeśli zrozumiałe jest jak działa algorytm *KMP* to ten fakt nie powinien wymagać dowodu.
-- Algorytm może również służyć do znajdowania wzorca w tekście cyklicznym - zamiast oryginalnego rozwiązania wystarczy zaaplikować je dla słowa: $w\#TT$.
-
 
 ## Uogólnienie algorytmu na wiele wzorców
 

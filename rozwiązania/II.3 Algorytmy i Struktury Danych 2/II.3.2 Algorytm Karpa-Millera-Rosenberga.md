@@ -1,6 +1,9 @@
-Tablice sufiksowe, wykorzystanie algorytmu KMR, zastosowania.
+Tablice sufiksowe, tworzenie za pomocą algorytmu KMR, definicje funkcji LCP
+i LCP2, zastosowanie LCP2 do wyszukiwania łańcucha w tekście.
+
 ---
-# Tablice sufiksowe
+
+# Tablice sufiksowef
 
 ## Definicja
 Niech $T = c_1 c_2 \ldots c_n$ *(tekst)*. Oznaczmy przez $sufiks_i = c_i c_{i+1} \ldots c_n$ sufiks tekstu $T$ zaczynający się na pozycji $i$-tej. Niech $SA[k]$ będzie pozycją, od której zaczyna się $k$-ty leksykograficznie sufiks $T$. Sufiks zaczynający się na pozycji $n+1$-szej nie jest brany pod uwagę. Ciąg sufiksów posortowany leksykograficznie wygląda następująco: $sufiksSA[1]<sufiksSA[2]<sufiksSA[3]<…<sufiksSA[n]$. Tablicę $SA$ nazywamy **tablicą sufiksową**.
@@ -45,13 +48,84 @@ Algorytm *KMR* jest przykładem algorytmu dynamicznego - każdy kolejny porząde
 ### Szkic analizy złożoności
 Zewnętrzna pętla *for* wykona się oczywiście $O(logn)$ razy. Obliczanie długości aktualnie rozważanych podsłów umiemy zrealizować w czasie stałym - mnożąc poprzednią wartość przez $2$. Tworzenie tablicy $temp$ trwa $O(n)$. Posortowanie tablicy $temp$ zajmuje nam $O(nlogn)$. W końcu wypełnienie tablicy $DBF$ odbywa się w czasie $O(n)$. Zbierając te wszystkie fakty razem dostaniemy złożoność $O(nlog^2n) = O(|T|log^2|T|)$ - najbardziej kosztowna operacja to sortowanie, które zdarza się $O(log n)$ razy. Złożoność można zbić do $O(|T|log|T|)$ wykorzystując sortowanie pozycyjnego względem najpierw drugiego, a potem pierwszego elementu.
 
-## Zastosowania tablicy $DBF$
-- Możemy porównać dowolne dwa podsłowa z $T$ o równej długości - analogicznie jak w algorytmie *KMR* możemy reprezentować te słowa jako dwie liczby. Znajdujemy największą potęgę $2$ nie większą od długości słów, oznaczmy tę liczbę jako $k$, i tworzymy parę z liczb odpowiadających za podsłowa o długości $k$ będące odpowiednio prefiksem i sufiksem tego słowa.
-- Możemy również porównać dowolne dwa podsłowa z $T$ - wystarczy przyciąć dłuższe podsłowo do długości mniejszego i porównać tak jak w poprzednim zastosowaniu. Jeśli okażą się równe to oczywiście krótsze słowo było mniejsze, w przeciwnym wypadku dostaniemy odpowiedź wprost.
+# SUF
+* $y=x\#^{n-1}$, $y$ jest konkatenacją $x$ i $n-1$ znaków $\#$, $|y|=2n-1$ , znak $\#$ mniejszy niż każdy znak alfabetu.
+* Oblicz $KMR_n[1..n]$ dla słowa $y$.
+* "Odwróć tablicę KMR": $SUF[i]=j$ wtw. $KMR_n[j]=i$
 
-## Zastosowanie tablicy sufiksowej
-- Tablica sufiksowa może zostać użyta do obliczenia najdłuższego wspólnego prefiksu pomiędzy dowolną parą sufiksów w czasie $O(log|T|)$ z preprocessingiem w czasie $O(|T|log|T|)$. Będziemy chcieli stworzyć tablicę $LCP$ taką, że $LCP[i]$ oznacza długość najdłuższego wspólnego prefiksu pomiędzy $i$-tym i $i+1$-wszym sufiksem w tablicy sufiksowej. Taką tablicę tworzymy po prostu porównując po kolei litery tych sufiksów. Mając taką tablicę łatwo zauważyć, że jeśli chcemy znaleźć najdłuższy wspólny prefiks sufiksów na pozycjach $i$ i $j$ to wystarczy wziąć $min(LCP[i], LCP[i+1] \ldots LCP[j-1])$. Aby efektywnie znajdować to minimum w czasie $O(log|T|)$ możemy przebudować $LCP$ na drzewo przedziałowe - stąd preprocessing w czasie  $O(|T|log|T|)$.
+Czas: $O(nlgn)$
+Pamięć: $O(n)$, gdyż podczas obliczania $KMR_{2r}$ potrzebujemy tylko $KMR_r$, $r=2,4,8,...$.
 
-## Inne przydatne fakty
-- Tablicę sufiksową można stworzyć z drzewa sufiksowego przeglądając je w porządku in-order. Można również stworzyć drzewo sufiksowe z tablicy sufiksowej.
-- Używając algorytmu Kärkkäinena-Sandersa możemy skonstruować drzewo sufiksowe w $O(|T|)$.
+# LCP
+$LCP[i]=$długość najdłuższego wspólnego prefiksu słów $SUF[i]$ oraz $SUF[i+1]$. 
+
+# LCP2
+$LCP2[i,j]$ = długość najdłuższego wspólnego prefiksu wszystkich sufiksów od $i$-tego w kolejności
+leksykograficznej do do $j$-tego włącznie, czyli najdłuższy wspólny prefiks słów $SUF[i], SUF[i+1], ... , SUF[j]$.
+
+Funkcję $LPC2$ wykorzystujemy do efektywnego wyszukiwania połówkowego słów w tablicy sufiksowej.
+
+Tablicujemy $LCP2[i,j]$ tylko dla $i<=j$ występujących jako końce przedziałów w wyszukiwaniu połówkowym. Załóżmy, że są to pary $(i,j)$, $1<=i<j<=n$ o końcach w potęgach dwójki i długościach równych potęgom dwójki, czyli postaci $i=(k-1)2^q+1, j=k2^q$, gdzie $q=1,...,lg n$, $k=1,...,n/2^q$, $n$ jest potęgą $2$.
+
+Takich par jest $O(n)$, i tworzą drzewo binarne
+* liście postaci $(i-1,i)$, dla $i+1$ nieparzystych
+* poziom wyżej postaci $(i-3,i)$ dla $i$ będących wielokrotnościami $4$, itd.,
+* korzeń postaci $(1,n)$.
+
+Obliczanie rekurencyjne ze wzoru:
+$$LCP2[v=(i,i+1)] = LCP(i)$$
+$$LCP2[v=(i,j)] = min\{LCP2[v.left], LCP2[v.right], LCP[(j+i-1)/2]\}$$
+
+Czas O(n).
+
+## Wyszukiwanie w tablicy sufiksowej
+Dane: Słowo $x$, jego tablica sufiksowa $SUF[n]$ wraz z funkcją $LCP2$, oraz słowo $y$ długości $m<n$.
+
+Znajdź wystąpienie $y$ w słowie $x$.
+
+Wyszukiwanie połówkowe:
+
+$L, R$ – końce aktualnego przedziału, $M$ – środek
+
+Niezmiennik: 
+$$l = lcp(SUF[L], y), r = lcp(SUF[R], y)$$
+$$lcp(w,z) := \text{ najdłuższy wspólny prefiks słów } w, z$$
+Początkowo $L=1, R=n$, wartości $l, r$ oblicz zwyczajnie.
+Kolejny krok: porównanie $y$ z $SUF[M]$.
+Załóżmy, że $l > r$. Pozostałe sytuacje $(l=r, l<r)$ podobnie.
+
+### Przypadek $LCP2(L,M)>l$
+$y$ pasuje do $SUF[M]$ aż do pozycji $l$
+
+$(l+1)$-znak w $SUF[M]$ jest ten sam co w $SUF[L]$, czyli mniejszy niż w słowie $y$ zatem idziemy w prawo: 
+* $L := M$
+* $l, r$ - bez zmian
+* $y$ nie badany dalej w tym momencie
+
+### Przypadek 2: $k=LCP2[L,M] < l$
+* $(k+1)$ - znak w słowie $y$ ten sam co w $SUF[L]$, czyli mniejszy niż w $SUF[M]$ zatem idź w lewo: 
+* $R := M$
+* $r := LCP2[L,M]$
+* $l$ – bez zmian
+* $y$ nie badany dalej w tym momencie
+
+### Przypadek 3: $LCP2[L,M] = l$
+w słowie $y$ oraz $SUF[M]$ $l$ początkowych znaków pokrywa się, porównuj ich znaki od $(l+1)$-go do pierwszego miejsca $k$ gdzie są różne.
+
+Jeśli $y < SUF[M]$, to idź w lewo:
+* $R := M$
+* $r := k-1$, $l$ bez zmian
+
+wpp. idź w prawo:
+* $L := M$
+* $l := k-1$, $r$ bez zmian.
+
+## Złożoność
+Złożoność całości wyszukiwania:
+* liczba iteracji (wyszukiwania połówkowego): $lg n$
+* liczba porównań znaków słowa $y$:
+* dopasowujących: $m$ (każdy znak $y$ dopasowany raz)
+* pozostałych: co najwyżej jeden w każdej iteracji,
+zatem nie więcej niż $log n$
+
+Razem: $O(log n + m)$.

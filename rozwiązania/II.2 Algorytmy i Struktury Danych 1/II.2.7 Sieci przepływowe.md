@@ -1,4 +1,4 @@
-Sieci przepływowe, metoda Forda-Fulkersona, przykładowy algorytm o złożoności wielomianowej.
+Sieci przepływowe, metoda Forda-Fulkersona, algorytm Edmondsa-Karpa.
 
 ---
 
@@ -56,5 +56,3 @@ Górne (trywialne) ograniczenie na złożoność wynosi $O(|E| \cdot |f|)$, bo w
 **Uwaga!** Nie musi to być złożoność wielomianowa, bo nie znamy wartości $|f|$. 
 
 Wielomianowy jest chociażby algorytm **Edmondsa - Karpa** - metoda Forda - Fulkersona + *wyszukiwanie ściezek powiększających BFS-em* (co daje zawsze najkrótsza ściezkę) pozwala osiągnąć wielomianową złożoność $O(V E^2)$.
-
-Algorytm **push-relabel**, oparty na zupełnie innym podejściu, osiąga złożoność $O(V^3)$.

@@ -1,4 +1,5 @@
-Znajdowanie najkrótszych ścieżek dla wszystkich par wierzchołków grafu, przechodnie domknięcie relacji.
+Znajdowanie najkrótszych ścieżek dla wszystkich par wierzchołków grafu,
+algorytm Warshalla-Floyda lub algorytm Johnsona.
 
 ---
 
@@ -11,17 +12,7 @@ Znajdowanie najkrótszych ścieżek dla wszystkich par wierzchołków grafu, prz
 ## Output
 Dla każdej pary wierzchołków $u, v \in V$ długość najkrótszej ścieżki od $u$ do $v$; oznaczamy ją jako $d(u, v)$.
 
-## Rozwiązanie 1. 
-Zastosować $|V|$ razy algorytm *Dijkstry* lub *Bellmana-Forda*.
-
-Uwaga. Jeśli graf zawiera krawędzie o wagach ujemnych, algorytm Dijkstry nie działa.
-
-Złożoność w przypadku wykorzystania algorytmu *Bellmana - Forda* wynosi $O(V^2E)$.
-
-W przypadku algorytmu Dijkstry z koleką priorytetową realizowaną za pomocą kopca osiągamy $O(VE \log V)$. Jeśli jednak realizujemy kolejkę przy pomocy kopców Fibonacciego, złożoność wynosi $O(V(E + V \log V))$
-
-## Rozwiązanie 2. 
-Algorytm *Floyda - Warshalla*.
+## Algorytm *Warshalla - Floyda*.
 
 **Uwaga.** Algorytm działa dla grafów z krawędziami o wagach ujemnych.
 
@@ -51,17 +42,7 @@ Floyd-Warshall (G as graph) // n = |V(G)|
 
 Złożoność oczywista $\Theta(n^3)$.
 
-### Znajdowanie przechodniego domknięcia relacji
-Algorytm *Floyda - Warshalla* można zastosować do znajdowania **przechodniego domknięcia relacji** (dla grafów jest to problem osiągalności dla wszystkich par wierzchołków).
-
-#### Idea algorytmu
-* Początkowa wartość tablicy to reprezentacja relacji: $D[i, j] = 1$ jeśli para $(i, j)$ jest w relacji, $0$ w przeciwnym przypadku.
-* Zamiast operacji **min** jest logiczne **OR**,
-* Zamiast **+** jest logiczne **AND**.
-* W tablicy wynikowej $D[i, j] = 1$ jeśli istnieje ścieżka z $i$ do $j$, $0$ w przeciwnym przypadku.
-
-## Rozwiązanie 3
-Algorytm *Johnsona*.
+## Algorytm *Johnsona*.
 
 ### Idea algorytmu
 * Jeśli graf zawiera krawędzie o wadze ujemnej, przeliczamy wagi tak, aby były nieujemne i nie zmieniła się struktura najkrótszych ścieżek.
@@ -70,4 +51,4 @@ Algorytm *Johnsona*.
 
 Złożoność: Jeśli używamy kopca jako kolejki priorytetowej, to wynosi $O(VE \log V)$. Wynika z tego, że nie opłaca się go stosować dla graów gęstych, wtedy lepszy jest algorytm *Floyda - Warshalla*.
 
-Jeśli natomiast jako kolejki używamy kopca Fibonacciego, to złożoność jest rzędu $O(V(E + V \log V))$, więc lepiej niż algorytm *Floyda - Warshalla*.
+Jeśli natomiast jako kolejki używamy kopca Fibonacciego (kilka kopców), to złożoność jest rzędu $O(V(E + V \log V))$, więc lepiej niż algorytm *Floyda - Warshalla*.

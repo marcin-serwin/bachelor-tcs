@@ -1,4 +1,5 @@
-Iloczyn kartezjański i jego własności. Pojęcia relacji, złożenia, relacji odwrotnej, własności tych pojęć.
+Iloczyn kartezjański i jego własności. Pojęcia relacji, złożenia, relacji odwrotnej,
+własności tych pojęć.
 
 ---
 
@@ -27,13 +28,8 @@ Gdy $A = \{ 1 \}$, to:
 Produkt iloczynów jest tym samym co iloczyn produktów:
 $$(A \cap B) \times (C \cap D) = (A \times C) \cap (B \times D)$$
 
-![](../../resources/I.4.5-iloczyn.png)
-
 ### Produkt sum
 Natomiast produkt sum nie jest (z reguły) sumą produktów: $$(A \cup B) \times (C \cup D) \neq (A \times C) \cup (B \times D)$$
-
-![](../../resources/I.4.5-suma.png)
-
 
 ### Rozdzielność
 * $A \times (B \cup C) = (A \times B) \cup (A \times C)$
@@ -52,15 +48,6 @@ Niech $R \subseteq A\times B$ oraz $S\subseteq B \times C$. Złożenie tych dwó
 Symbolicznie, $$a \ (S\circ R)\ c\iff a\,R\,b\,S\,c$$
 
 Przypadkiem szczególnym złożenia relacji jest złożenie funkcji.
-
-## Przykład
-Niech $R$ i $S$ będą takimi relacjami w zbiorze $\mathbb{N}$, że:
-* $R=\{(2,1),(3,1),(4,2),(4,5),(5,3)\}$
-* $S=\{(1,3),(4,1),(3,6),(6,8),(6,7)\}$
-
-Wtedy odpowiednio złożeniem relacji będą:
-* $S\circ R=\{(2,3),(3,3),(5,6)\}$
-* $R\circ S=\{(1,1)\}$
 
 ## Własności
 * Operacja złożenia relacji jest **łączna**, tj.: $S\circ (R\circ T) = (S\circ R)\circ T$.

@@ -12,9 +12,7 @@ Kompozycja oznacza, że dana część może należeć tylko do jednej całości.
 
 Na diagramach UML kompozycję oznacza się wypełnionym rombem.
 
-![](../../resources/II.6.1-uml.png)
-
-*Design Patterns*: _"Favor **object composition** over **class inheritance**"_
+<img src="../../resources/II.6.1-uml.png" width="300">
 
 ## Przykłady
 
@@ -28,82 +26,35 @@ Poniższy przykład pozwalający rozróżnić kompozycję od agregacji.
 ### Java
 
 Klasa **House**
-
 ```java
-public class House {
-  private Room room;
-  private Street street;
-
-  public House(Street street) {
-    this.room = this.new Room(10, 20, 30);
-    this.street = street;
-  }
-
-  public int getRoomArea() {
-    return room.getLength() * room.getWidth();
-  }
-
-  public Street getStreet() {
-    return street;
-  }
-
-  private class Room {
-    private int length;
-    private int width;
-    private int height;
-
-    public Room(int length, int width, int height) {
-      this.length = length;
-      this.width = width;
-      this.height = height;
+import java.util.*;
+public class Room{
+};
+public class House{
+    List<Room> rooms;
+    House(int rooms_num){
+        this.rooms = new LinkedList<>();
+        for(int i=0;i<rooms_num; i++){
+            this.rooms.add(new Room());
+        }
     }
+};
 
-    public int getLength() {
-      return length;
+```
+
+### c++
+
+```c++
+#include<vector>
+class Room{
+};
+class House{
+public:
+    std::vector<Room> rooms;
+    House(int rooms_num){
+        for(int i=0;i<rooms_num;i++){
+            this->rooms.push_back(Room());
+        }
     }
-
-    public int getWidth() {
-      return width;
-    }
-  }
-}
+};
 ```
-
-**Klasa Street**
-
-```java
-public class Street {
-  private String name;
-  public Street(String name) {
-    this.name = name;
-  }
-}
-```
-
-Oraz użycie:
-
-```java
-  Street baker = new Street("Baker street");
-  House myHouse = new House(baker);
-  House yourHouse = new House(baker);
-
-  myHouse.getRoomArea(); // 200
-  boolean sameRef = myHouse.getStreet() == yourHouse.getStreet(); //true
-  boolean areEqual = Objects.equals(myHouse.getStreet(), yourHouse.getStreet()); //true
-```
-
-### C#
-
-```csharp
-public class Engine
-{
-
-}
-
-public class Car
-{
-  Engine e = new Engine();
-}
-```
-
-Diagram UML dla tego przykładu jest powyżej.

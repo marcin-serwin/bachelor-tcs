@@ -1,4 +1,5 @@
-Konstrukcja liczb całkowitych. Działania na liczbach całkowitych. Konstrukcja liczb wymiernych i działania na nich.
+Konstrukcja liczb całkowitych. Działania na liczbach całkowitych. Konstrukcja
+liczb wymiernych i działania na nich
 
 ----
 

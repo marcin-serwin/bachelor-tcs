@@ -1,4 +1,4 @@
-Porządki częściowe. Twierdzenie Dilwortha.
+Porządki częściowe, Twierdzenia Dilwortha i Spernera.
 
 ---
 
@@ -21,3 +21,6 @@ Minimalna liczba **łańcuchów** potrzebna do pokrycia zbioru częściowo uporz
 
 ### Twierdzenie dualne
 Minimalna liczba **antyłańcuchów** potrzebna do pokrycia zbioru częściowo uporządkowanego jest równa długości jego największego **łańcucha**.
+
+# Twierdzenie Spernera
+Jeśli $P$ jest rodziną wszystkich podzbiorów pewnego $n$ elementowego zbioru $X$, a porządek $\sqsubseteq$ jest zawieraniem, to każdy antyłańcuch zawarty w $P$ ma co najwyżej $n \choose \lfloor {n/2}\rfloor$ elementów.

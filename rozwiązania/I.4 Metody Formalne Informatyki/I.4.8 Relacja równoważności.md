@@ -1,4 +1,5 @@
-Relacje równoważności i podziały zbiorów. Relacja równoważności jako środek do definiowania pojęć abstrakcyjnych.
+Relacje równoważności i podziały zbiorów. Relacja równoważności jako środek
+do definiowania pojęć abstrakcyjnych.
 
 ---
 # Relacja równoważności
@@ -33,19 +34,4 @@ Każda klasa abstrakcji na zadanym zbiorze wyznacza jednoznacznie podział tego 
 
 ## Przykłady
 
-### 1. Relacja równości
-Na dowolnym zbiorze $X$ zdefiniowana jest relacja:
-$$x R y \Leftrightarrow x = y$$ Jest ona nazywana równością, a jej klasami abstrakcji są zbiory jednoelementowe $\{x\}$.
-
-### 2. Relacja modulo
-W zbiorze $A = \{1,2,3,4,5,6,7\}$ określamy relację $x \equiv y$ wtw gdy $x$ i $y$ daję tę samą resztę z dzielenia przez 3. Jest to relacja równoważności z klasami abstrakcji:
-
-* $[1] = [4] = [7] = \{1,4,7\}$
-* $[2] = [5] = \{2, 5\}$
-* $[3] = [6] = \{3, 6\}$
-
-Poszczególne warstwy są rozłączne, a przestrzenią ilorazową jest zbiór:
-$${A/}_\equiv = \left \{ \left \{ 1, 4, 7 \right \}, \left \{ 2, 5 \right \}, \left \{ 3,6 \right \} \right \}$$
-
-### 3. Samoloty
-W zbiorze wszystkich samolotów istnieje relacja równoważności: dwa samoloty są równoważne, gdy mogą przewieźć tę samą liczbę pasażerów. Klasą abstrakcji danego samolotu zabierającego na pokład równo 50 osób jest zbiór wszystkich samolotów mogących przewieźć dokładnie 50 osób.
+Konstrukcja liczb całkowitych, wymiernych, rzeczywistych.

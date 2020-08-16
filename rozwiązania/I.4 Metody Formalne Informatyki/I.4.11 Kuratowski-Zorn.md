@@ -24,8 +24,6 @@ Niech $X$ bedzie niepustym zbiorem cześciowo uporządkowanym przez relacje  $\p
 
 W dowodach poniższych twierdzeń stosuje się Lemat Kuratowskiego-Zorna:
 
-## Twierdzenie
-Niech $\mathcal{X}$ będzie niepustą rodziną zbiorów, częściowo uporządkowaną przez relację zawierania. Załóżmy, że suma każdego niepustego łańcucha w $\mathcal{X}$ należy do rodziny $\mathcal{X}$ . Wtedy w rodzinie $\mathcal{X}$ istnieje element maksymalny.
-
-## Twierdzenie
-W każdym zbiorze częściowo uporządkowanym istnieje antyłańcuch maksymalny pod względem inkluzji.
+1. Niech $\mathcal{X}$ będzie niepustą rodziną zbiorów, częściowo uporządkowaną przez relację zawierania. Załóżmy, że suma każdego niepustego łańcucha w $\mathcal{X}$ należy do rodziny $\mathcal{X}$ . Wtedy w rodzinie $\mathcal{X}$ istnieje element maksymalny.
+2.  W każdym zbiorze częściowo uporządkowanym istnieje antyłańcuch maksymalny pod względem inkluzji.
+3. Każda przestrzeń liniowa ma bazę (rozważamy zbiór zbiorów z wektorami liniowo niezależnymi z relacją inkluzji)

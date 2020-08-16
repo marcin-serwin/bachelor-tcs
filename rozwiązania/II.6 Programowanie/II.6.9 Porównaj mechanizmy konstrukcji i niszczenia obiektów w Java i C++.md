@@ -1,4 +1,5 @@
-Porównaj mechanizmy konstrukcji i niszczenia obiektów w Java i C++. Wskaż mocne i słabe punkty każdego z podejść.
+Porównaj mechanizmy konstrukcji i niszczenia obiektów w Java i C++. Wskaż
+mocne i słabe punkty każdego z podejść.
 
 ---
 

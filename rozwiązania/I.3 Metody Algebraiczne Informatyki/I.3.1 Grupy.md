@@ -10,14 +10,11 @@ Grupa to uporządkowana czwórka ${\mathbf G}=(G,*,',e)$, gdzie $G$ jest dowolny
 - (łączność) $(x*y)*z=x*(y*z)$,
 - $e*x=x*e=x$, czyli $e$ to element neutralny grupy ${\mathbf G}$.
 
-## Rząd grupy
-Rząd grupy skończonej ${\mathbf G}=(G,*,e)$ to liczba $\left \vert G \right \vert$ jej elementów. Gdy grupa ${\mathbf G}$ nie jest skończona, to mówimy, że ma rząd nieskończony.
+*Rząd grupy* skończonej ${\mathbf G}=(G,*,e)$ to liczba $\left \vert G \right \vert$ jej elementów. Gdy grupa ${\mathbf G}$ nie jest skończona, to mówimy, że ma rząd nieskończony.
 
-## Grupa cykliczna
-Jest to grupa generowana zbiorem jednoelementowym.
+*Grupa cykliczna* jest to grupa generowana zbiorem jednoelementowym.
 
-## Grupa abelowa
-Grupę nazywamy przemienną, lub abelową, jeśli jej działanie jest przemienne.
+Grupę nazywamy przemienną, lub *abelową*, jeśli jej działanie jest przemienne.
 
 # Przykłady:
 
@@ -62,4 +59,4 @@ Jeśli elementy macierzy należą do pewnej grupy, to zbiór macierzy o tych sam
 
 W RSA wykorzystujemy grupę z działaniami mnożenia modulo n dla liczb względnie pierwszych z n (wykorzystujemy własność elementu odwrotnego). Wybieramy pewien element z tej grupy i używamy go w kluczu publicznym, a jego odwrotność w kluczu prywatnym.
 
-Grupy wykorzystuje się także w algorytmach testowania pierwszości - patrz [Testy pierwszości](../II.3 Algorytmy i Struktury Danych 2/II.3.6 Liczby pierwsze.md).
+Grupy wykorzystuje się także w algorytmach testowania pierwszości - patrz [Testy pierwszości](../II.3 Algorytmy i Struktury Danych 2/II.3.5 Liczby pierwsze.md).

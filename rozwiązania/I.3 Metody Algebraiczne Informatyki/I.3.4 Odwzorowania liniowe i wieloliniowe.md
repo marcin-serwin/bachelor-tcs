@@ -1,4 +1,4 @@
-Odwzorowania liniowe i wieloliniowe
+Odwzorowania liniowe i wieloliniowe.
 
 ---
 

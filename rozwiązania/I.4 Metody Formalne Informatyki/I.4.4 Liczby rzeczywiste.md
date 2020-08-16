@@ -38,31 +38,6 @@ Działania w $\mathbb{Q}$ przenoszą się na działania na naszych ciągach, a w
 | Element neutralny mnożenia | $[1]\;$ – ciąg stale równy $1$ |
 | Porządek | $[(a_n)_{n\in\mathbb{N}}]<[(b_n)_{n\in\mathbb{N}}] \iff \exists_{0<r\in\mathbb{Q}}\exists_{n_0\in\mathbb{N}}\forall_{n>n_0}a_n+r<b_n$ |
 
-## Dowód, że dodawanie jest poprawnie zdefiniowane
-Na przykładzie dodawania pokażemy, że definicje nie zależą od wyboru reprezentantów (mnożenie idzie analogicznie).
-
-Weźmy 4 ciągi:
-$(a_n)_{n\in\mathbb{N}} \sim (c_n)_{n\in\mathbb{N}}$ i $(b_n)_{n\in\mathbb{N}} \sim (d_n)_{n\in\mathbb{N}}$. Będziemy chcieli pokazać, że:
-$[(a_n)_{n\in\mathbb{N}}] + [(b_n)_{n\in\mathbb{N}}] = [(c_n)_{n\in\mathbb{N}}] +  [(d_n)_{n\in\mathbb{N}}]$.
-
-Z definicji dodawania powyższy warunek jest równoważny $[(a_n + b_n)_{n\in\mathbb{N}}] = [(c_n + d_n)_{n\in\mathbb{N}}]$
-i $(a_n + b_n)_{n\in\mathbb{N}} \sim (c_n + d_n)_{n\in\mathbb{N}}$.
-
-Ponieważ $(a_n)_{n\in\mathbb{N}} \sim (c_n)_{n\in\mathbb{N}}$ i $(b_n)_{n\in\mathbb{N}} \sim (d_n)_{n\in\mathbb{N}}$
-
-$$\begin{align}
-\forall_{\mathbb{Q}\ni\varepsilon>0}\exists_{n_1\in\mathbb{N}}\forall_{n>n_1}|a_n-c_n|<\frac{\varepsilon}{2}\\
-\forall_{\mathbb{Q}\ni\varepsilon>0}\exists_{n_2\in\mathbb{N}}\forall_{n>n_2}|b_n-d_n|<\frac{\varepsilon}{2}
-\end{align}$$
-
-Z dwóch powyższych:
-
-$$\begin{align}
-\forall_{\mathbb{Q}\ni\varepsilon>0}\exists_{n_0\in\mathbb{N}}\forall_{n>n_0}|(a_n+b_n)-(c_n+d_n)| \leqslant |a_n-c_n|+|b_n-d_n| < \varepsilon.
-\end{align}$$
-
-Zatem $(a_n + b_n)_{n\in\mathbb{N}} \sim (c_n + d_n)_{n\in\mathbb{N}}$ czyli dodawanie jest dobrze zdefiniowane.
-
 ## Rozwinięcie liczby rzeczywistej w szereg
 
 Dla każdej liczby rzeczywistej $0 \leqslant X < 1$ istnieje ciąg $(r_n)_{n\in\mathbb{N}} \in 2^\mathbb{N}$ taki, że ciąg jego sum cześciowych $x_n: \mathbb{N} \rightarrow \mathbb{Q}$ dany jako $x_n = \sum^n_{i=0} \frac{r_i}{2^{i+1}}$, spełnia:

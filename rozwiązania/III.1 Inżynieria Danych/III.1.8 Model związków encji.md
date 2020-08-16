@@ -1,4 +1,4 @@
-Omów sposób modelowania baz danych za pomocą modelu związków encji.
+Omów sposób modelowania baz danych za pomocą modelu związków-encji.
 
 ---
 # Model związków encji

@@ -1,4 +1,5 @@
-Opisz rodzaje klas dostępne w języku programowania Java. Czym są klasy abstrakcyjne? Czym różni się od interfejsów? Jakie ich zastosowania?
+Opisz rodzaje klas dostępne w języku programowania Java. Czym są klasy
+abstrakcyjne? Czym różni się od interfejsów? Jakie ich zastosowania?
 
 ---
 
@@ -29,7 +30,7 @@ Opisz rodzaje klas dostępne w języku programowania Java. Czym są klasy abstra
 
   * Klasy pochodne w Javie mogą implementować wiele interfejsów (ale nie dziedziczyć po wielu klasach).
 
-  * Podobnie jak klasy abstrakcyjne, interfejs umożliwia pisanie uniwersalnego kodu. Dodatkowo pozwala na tworzenie bardziej elastycznego kodu (dependency inversion principle - zobacz [SOLID](../III.2 Inżynieria Oprogramowania/III.2.3 SOLID.md)).
+  * Podobnie jak klasy abstrakcyjne, interfejs umożliwia pisanie uniwersalnego kodu. Dodatkowo pozwala na tworzenie bardziej elastycznego kodu (dependency inversion principle - zobacz [SOLID](../III.2.4 SOLID.md)).
 
 ## Klasa finalna
   * Klasa, po której nie można dziedziczyć.

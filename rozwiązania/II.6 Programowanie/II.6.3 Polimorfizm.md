@@ -20,9 +20,7 @@ Metoda, której wywołanie jest polimorficzne. Pozwala na rozszerzanie kodu rów
   * Programista myśli *co* ma wykonać a nie *jak* to coś wykonać - nie musi się przejmować szczegółami implementacyjnymi.
 
 ## Klasa abstrakcyjna
-Klasa, w której (świadomie) nie zrealizowano przynajmniej jednej funkcji. O takiej funkcji mówimy, że jest czysto wirtualna albo abstrakcyjna - nie definiujemy jej w klasie abstrakcyjnej, a jedynie w klasach pochodnych. W tym celu ciało funkcji pozostawiamy puste, albo - co jest znacznie lepszym rozwiązaniem, jeśli tylko język programowania na to pozwala - ograniczamy się do podania samej deklaracji wraz ze stosownie zapisaną informacją, że funkcja jest abstrakcyjna.
-
-Dzięki wyłapaniu wspólnych cech pewnych klas, dobrze dobrane klasy abstrakcyjne umożliwiają pisanie kodu o wysokim stopniu wielokrotnej używalności.
+Klasa, która nie może mieć swoich reprezentantów pod postacią obiektów.[1] Zależnie od użytego języka programowania klasy abstrakcyjne tworzy się na różne sposoby.
 
 ## Interfejs
 Pełni rolę umowy, która służy ograniczeniu kontaktów pomiędzy klasami do niezbędnego minimum:
@@ -34,37 +32,49 @@ Pełni rolę umowy, która służy ograniczeniu kontaktów pomiędzy klasami do 
   * Ustalenie konkretnego interfejsu jest trudnym problemem, ponieważ z jednej strony powinien on być jak najbardziej zwięzły (tak aby implementacja nie była kłopotliwa), a z drugiej strony zbyt ubogi interfejs mógłby być problemem przy dodawniu nowych funkcji do API. Inaczej mówiąc - to jest motywacja dla takich rzeczy jak Extension Methods (C#) albo domyślna implementacja w interfejsach (Java) .
 
 
-# C# vs Java
-  * W Javie wszystkie metody są domyślnie wirtualne, a metody w klasach pochodnych nadpisują metody z klasy bazowej. W C# tak nie jest - trzeba przed metodą napisać explicite `virtual`.
-
-  * W C# metoda może być zadeklarowana ze słowem `override` gdy w jej klasie macierzystej jest funkcja o identycznym nagłówku zadeklarowana jako `virtual` lub `override`. W Javie taka deklaracja jest opcjonalna.
+# Java
+  * W Javie wszystkie metody są domyślnie wirtualne, a metody w klasach pochodnych nadpisują metody z klasy bazowej. W C++ trzeba dodać `virtual`.
 
   * W Javie ciało metody `final` może być wstawione bezpośrednio do generowanego kodu w miejsce wywołania podprogramu (na podobnej zasadzie jak funkcje `inline` w C++). W C# nie powoduje to różnicy - w kodzie IL (Intermediate Language) nie zostanie użyta operacja `calls` zamiast `calvirts` (potrzeba wykonać sprawdzenie czy referencja do funkcji nie jest nullem).
+````
+public class Car<T> {
+    // T stands for "Type"
+    private T t;
 
-  * W C#, jeśli w klasie pochodnej zdefiniujemy metodę o takiej samej sygnaturze jak w klasie podstawowej (lub wyższej w hierarchii dziedziczenia), to metoda taka zasłoni (*shadowing*) tę dziedziczoną. W Javie nie można przysłonić metody - można ją tylko nadpisać (*override*). Można w Javie natomiast przysłonić zmienną:
-
-```java
-class A {
-    int variable = 5;
-    void f() {
-        System.out.println("A");
-    }
+    public void set(T t) { this.t = t; }
+    public T get() { return t; }
 }
-class B extends A {
-    int variable = 10;
-    void f() {
-        System.out.println("B");
-    }
+````
+
+# C++
+* Ponieważ C++ jest językiem hybrydowym, nie mamy konieczności korzystania z polimorfizmu. Zostanie on automatycznie włączony podczas zadeklarowania przynajmniej jednej metody wirtualnej w danej klasie.
+* Dzięki dodaniu do naszego kodu metod wirtualnych, uruchomimy mechanizm polimorfizmu. Wczesne wiązanie statyczne nie będzie miało wtedy żadnego znaczenia, ponieważ to która funkcja zostanie wywołana będzie zależało od późnego wiązania dynamicznego.
+````
+template <class myType>
+myType GetMax (myType a, myType b) {
+ return (a>b?a:b);
 }
 
-B b = new B();
-A a = b;
-System.out.println(a.variable); // 5 zasłanianie (shadowing)
-a.f(); // "B" - nadpisywanie (override) - polimorfizm
-System.out.println(b.variable); // 10
-b.f(); // "B" 
-```
+class Bazowa {
+public:
+    virtual void fun() { cout << "Bazowa \n"; }
+};
 
-  Zasłanianie jest mechanizmem pożytecznym, ale dokonane nieświadomie może być w pewnych sytuacjach niebezpieczne. Dlatego standardowo kompilator wypisuje w takich sytuacjach ostrzeżenie. Jeśli świadomie stosujemy zasłanianie i nie chcemy ostrzeżenia, używamy słowa kluczowego `new` (w Javie `override`), którym poprzedzamy definicję metody zasłaniającej. O takiej formie zasłaniania mówimy, że jest przepisaniem metody (w odróżnieniu od nadpisania, z którym do czynienia mamy w przypadku metod wirtualnych).
+class Pochodna : public Bazowa {
+public:
+    void fun() { cout << "Pochodna \n"; }
+};
 
-Zobacz też [dziedziczenie](II.6.2 Dziedziczenie.md).
+int main(){
+    Bazowa *bazowa = new Pochodna();
+    Pochodna *pochodna = new Pochodna();
+
+    bazowa->fun();  //wyswietli: pochodna
+    pochodna->fun();//wyswietli: pochodna
+
+    system("pause");
+    return 0;
+}
+````
+
+
