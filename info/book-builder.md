@@ -1,5 +1,7 @@
 # Budowanie HTML i PDF
 
+Budowane za pomocą node v7.10.1 (npm v4.2.0)
+
 Za budowanie z plików Markdown ładnego HTML z wyrenderowanymi wzorami itd.
 odpowiedzialny jest program w Node.js w katalogu `book-builder/`. Równania są
 renderowane do SVG przy użyciu [MathJax](https://www.mathjax.org/),
