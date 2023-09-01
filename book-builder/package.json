@@ -15,7 +15,6 @@
     "markdown-it": "^6.0.1",
     "markdown-it-mathjax": "^1.0.3",
     "mathjax-node-page": "^3.2.0",
-    "mathjax-node-svg2png": "^2.0.0",
     "minimist": "^1.2.0",
     "pug": "^2.0.0-alpha7"
   }
