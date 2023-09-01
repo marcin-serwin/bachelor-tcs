@@ -14,6 +14,7 @@
     "jsdom": "^16.4.0",
     "markdown-it": "^6.0.1",
     "markdown-it-mathjax": "^1.0.3",
+    "mathjax": "^2.5.0",
     "mathjax-node-page": "^3.2.0",
     "mathjax-node-svg2png": "^2.0.0",
     "minimist": "^1.2.0",
